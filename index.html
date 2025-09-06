@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishal Sports</title>
-    <!-- google font -->
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-     <!-- tailwind and daily ui -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biker Zone</title>
+  <!-- tailwind and daisy ui cdn -->
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-
-
-<!-- Navbar Start -->
-<div class="bg-white shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
-
-    <!-- Logo -->
-    <div class="text-2xl font-bold">Hockey<span class="text-red-500">'s</span></div>
-
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-8 font-medium">
-      <a href="#" class="text-red-500">Home</a>
-      <a href="#">About</a>
-      <a href="#">Pages</a>
-      <a href="#">Blog</a>
-      <a href="#">Contact</a>
-    </div>
-
-    <!-- Right Side -->
-    <div class="hidden md:flex items-center space-x-4">
-      <i class="fas fa-search"></i>
-      <div class="bg-red-500 text-white px-4 py-2 rounded-lg cursor-pointer">Get Ticket</div>
-    </div>
-
-    <!-- Mobile Button -->
-    <div class="md:hidden p-2 text-gray-700 cursor-pointer" id="menu-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="hidden md:hidden flex flex-col items-center space-y-4 py-6 font-medium bg-white shadow-md" id="menu">
-    <a href="#" class="text-red-500">Home</a>
-    <a href="#">About</a>
-    <a href="#">Pages</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact</a>
-    <div class="bg-red-500 text-white px-4 py-2 rounded-md text-center cursor-pointer">Get Ticket</div>
-  </div>
-</div>
-
-<!-- JS Toggle -->
+<!-- google font poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheey">
+  
+<!-- tailwind custom classes -->
 <script>
-  const menuBtn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu");
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bike-primary-bg': 'rgba(231, 111, 81, 0.10)'
+           
+          }
+        }
+      }
+    }
+  </script>
 
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
+
+<!-- custom styles  -->
+<style>
+  .font-poppins{
+    font-family: 'Poppins',sans-serif;
+  }
+</style>
+
+</head>
+<body class="font-poppins">
+  <header class="md:container md:mx-auto">
+    <nav>
+      <div class="navbar bg-base-100">
+  <div class="flex-1 ">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
+       <li><a>Home</a></li>
+       <li><a>Shop</a></li>
+       <li><a>News</a></li>
+       <li><a>Contact</a></li>  
+       </ul>
+    </div>
+    <a class="btn btn-ghost normal-case text-4xl">Biker Zone</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu text-base menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li><a>Shop</a></li>
+          <li><a>News</a></li>
+          <li><a>Contact</a></li>
+         </ul>
+  </div>
+<div class="text-center">
+  <a 
+    class="btn bg-[#FFA500] text-white border-0 
+           w-full sm:w-auto 
+           px-3 sm:px-4 lg:px-5 
+           py-1.5 sm:py-2 
+           text-sm sm:text-base 
+           rounded-lg shadow 
+           hover:bg-orange-600 transition duration-300 ease-in-out"
+  >
+    Biker Zone
+  </a>
+</div>
 
 
      
