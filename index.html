@@ -12,14 +12,12 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <!-- Mobile menu toggle -->
 
 
-  <!-- Navbar Section -->
 <!-- Navbar Start -->
 <div class="bg-white shadow-sm">
-  <div class="w-full mx-auto px-4 flex justify-between items-center py-4">
-    
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
+
     <!-- Logo -->
     <div class="text-2xl font-bold">Hockey<span class="text-red-500">'s</span></div>
 
@@ -40,27 +38,32 @@
 
     <!-- Mobile Button -->
     <div class="md:hidden p-2 text-gray-700 cursor-pointer" id="menu-btn">
-      <i class="fas fa-bars"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div class="hidden md:hidden px-4 space-y-2 font-medium" id="menu">
-    <a href="#" class="block text-red-500">Home</a>
-    <a href="#" class="block">About</a>
-    <a href="#" class="block">Pages</a>
-    <a href="#" class="block">Blog</a>
-    <a href="#" class="block">Contact</a>
+  <div class="hidden md:hidden flex flex-col items-center space-y-4 py-6 font-medium bg-white shadow-md" id="menu">
+    <a href="#" class="text-red-500">Home</a>
+    <a href="#">About</a>
+    <a href="#">Pages</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
     <div class="bg-red-500 text-white px-4 py-2 rounded-md text-center cursor-pointer">Get Ticket</div>
   </div>
 </div>
-<!-- Navbar End -->
 
-<!-- Font Awesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JS Toggle -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
 
-
-
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
 
 
      
