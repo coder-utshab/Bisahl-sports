@@ -12,6 +12,15 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <!-- Mobile menu toggle -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
   <!-- Navbar Section -->
 <!-- Navbar Start -->
@@ -57,15 +66,7 @@
 <!-- Font Awesome for icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-<!-- Mobile menu toggle -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
 
-  menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
 
 
 
